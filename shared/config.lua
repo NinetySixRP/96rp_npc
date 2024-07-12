@@ -67,6 +67,19 @@ Config.NPCs = {
         radius = 1, -- radius of the npc
         animation = false
     },
+    CCTV = {
+        coords = vec3(-1096.66, 5175.04, 13.7),
+        heading = 272.42,
+        model = `g_m_m_korboss_01`,
+        clothing = { -- not needed if model is ped
+        component = {
+        },
+        prop = {
+        }
+        },
+        radius = 1, -- radius of the npc
+        animation = false
+    },
     deli2 = {
         coords = vec3(-1149.84, 5491.41, 21.97),
         heading = 359.06,
