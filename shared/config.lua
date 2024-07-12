@@ -408,5 +408,18 @@ Config.NPCs = {
         },
         radius = 1, -- radius of the npc
         animation = false
+    },
+    PawnShop = {
+        coords = vec3(188.14, 3697.89, 14.91),
+        heading = 179.09,
+        model = `G_M_M_ChiGoon_02k`,
+        clothing = { -- not needed if model is ped
+        component = {
+        },
+        prop = {
+        }
+        },
+        radius = 1, -- radius of the npc
+        animation = false
     }
 }

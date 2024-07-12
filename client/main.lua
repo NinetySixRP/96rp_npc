@@ -60,6 +60,10 @@ function Npc:show()
     end
 end
 
+function Npc:playAnimation(animDict, animName)
+
+end
+
 npcList = {}
 function RegisterNPCs()
     for key,value in pairs(Config.NPCs) do
