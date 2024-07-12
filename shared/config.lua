@@ -423,7 +423,7 @@ Config.NPCs = {
         animation = false
     },
     PawnShop = {
-        coords = vec3(188.14, 3697.89, 14.91),
+        coords = vec3(1355.03, 4494.51, 22.48),
         heading = 179.09,
         model = `G_M_M_ChiGoon_02k`,
         clothing = { -- not needed if model is ped
