@@ -13,6 +13,7 @@ function Npc:show()
     while not HasModelLoaded(self.data.model) do 
         RequestModel(self.data.model)
         Wait(100)
+        print("test"..self.data.coords)
     end
     local ped = CreatePed(4, self.data.model, self.data.coords.x, self.data.coords.y, self.data.coords.z - 1.03, self.data.heading, false, false)
     self.ped = ped
@@ -67,21 +68,23 @@ end
 npcList = {}
 function RegisterNPCs()
     for key,value in pairs(Config.NPCs) do
-        local alreadyAdded = false
-        for i = 1, #npcList do
-            if npcList[i].name == key then
-                alreadyAdded = true
+        CreateThread(function()
+            local alreadyAdded = false
+            for i = 1, #npcList do
+                if npcList[i].name == key then
+                    alreadyAdded = true
+                end
             end
-        end
 
-        if not alreadyAdded then
-            npc = Npc:new({
-                name = key,
-                data = lib.points.new(value.coords, value.radius, value),
-            })
-            npc:show()
-            table.insert(npcList, npc)
-        end
+            if not alreadyAdded then
+                npc = Npc:new({
+                    name = key,
+                    data = lib.points.new(value.coords, value.radius, value),
+                })
+                npc:show()
+                table.insert(npcList, npc)
+            end
+        end)
     end
     print("Spawned: "..tonumber(#npcList).." npcs")
 end
@@ -93,3 +96,9 @@ end)
 RegisterCommand('testnpc', function()
     RegisterNPCs()
 end)
+AddEventHandler('onResourceStart', function(resourceName)
+    if (GetCurrentResourceName() ~= resourceName) then
+      return
+    end
+    RegisterNPCs()
+  end)

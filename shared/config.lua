@@ -42,8 +42,8 @@ Config.NPCs = {
         animation = false
     },
     ShadyDealer = {
-        coords = vec3(55.28, 5717.02, 3.79),
-        heading = 342.87,
+        coords = vec3(533.42, 5202.17, 3.06),
+        heading = 105.04,
         model = `S_M_Y_Dealer_01`,
         clothing = { -- not needed if model is ped
             component = {
@@ -424,8 +424,8 @@ Config.NPCs = {
     },
     PawnShop = {
         coords = vec3(1355.03, 4494.51, 22.48),
-        heading = 179.09,
-        model = `G_M_M_ChiGoon_02k`,
+        heading = 91.82,
+        model = `G_M_M_ChiGoon_02`,
         clothing = { -- not needed if model is ped
         component = {
         },
