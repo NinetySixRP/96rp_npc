@@ -434,5 +434,18 @@ Config.NPCs = {
         },
         radius = 1, -- radius of the npc
         animation = false
-    }
+    },
+    ScrapDealer = {
+        coords = vec3(1151.36, 5708.67, 16.62),
+        heading = 226.16,
+        model = `g_m_m_chemwork_01`,
+        clothing = { -- not needed if model is ped
+        component = {
+        },
+        prop = {
+        }
+        },
+        radius = 1, -- radius of the npc
+        animation = false
+    },
 }
